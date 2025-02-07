@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div id="content">
+
+        <!--HEADER-->
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/raftingbw.png" alt="Aqua Adventure Land">
+                
+            </a>
+            <nav>
+                
+                <a href="index.html" target="blank">Home</a>
+                <a href="site-plan-rafting.html" target="blank">Site Plan</a>
+                <a href="contactus.html" target="blank">Contact Us</a>
+                <p>Aqua Adventure Land Lake Chivero</p>
+                <a>13th Street New Road</a>
+                <a>+263781339327</a>
+                <a>aqualand@gmail.com</a> 
+            </nav>
+        </header>
+
+        <div id="feedback"></div>
+
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121470.47316219278!2d30.93170995!3d-17.93437925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19310950e87f56c7%3A0xe2e654013f5c8767!2sLake%20Chivero!5e0!3m2!1sen!2szw!4v1738925980587!5m2!1sen!2szw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <!--FORM-->
+
+        <form action="/my-handling-form-page" method="post">
+
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name">
+                </li>
+                 <li>
+                  <label for="mail">E-mail:</label>
+                  <input type="email" id="mail" name="user_email">
+                </li>
+
+                <p>Purpose of the message</p>
+                <li>
+                    <label for="General Inquairy">General Inquairy:</label>
+                    <input type="radio" id="General Inquairy" name="user_General Inquairy">
+                </li>
+
+                <li>
+                    <label for="Reservation Question">Reservation Question:</label>
+                    <input type="radio" id="Reservation Question" name="user_Reservation Question">
+                </li>
+
+                <li>
+                    <label for="Website Suggestion">General Website Suggestion:</label>
+                    <input type="radio" id="Website Suggestion" name="user_Website Suggestion">
+                </li>
+                
+                <li>
+                   <label for="msg">Message:</label>
+                   <textarea id="msg" name="user_message"></textarea>
+                 </li>
+                 
+                 <label>
+                    <input type="checkbox">
+                    Please subscribe me to the monthly newsletter
+                 </label>  
+
+                 <li class="button">
+                    <button type="submit">Send your message</button>
+                 </li>
+               
+
+            </ul>
+        </form> 
+        
+        <main>
+            <section class="happy1">
+                <img class="card-img" src="images/happy11.jpg" alt="river in forest">
+                <h2>Dancing on the water</h2>
+            </section>
+
+            <section class="happy2">
+                <img class="card-img" src="images/happy12.jpg" alt="river in forest">
+                <h2>Memories With Friends and family</h2>
+            </section>
+
+            <section class="happy3">
+                <img class="card-img" src="images/happy13.jpg" alt="river in forest">
+                <h2>Refreshing</h2>
+            </section>
+        </main>
+            
+        </form>
+
+        <!--FOOTER-->
+        <footer>
+            <h3>©2025 * Aqua Adventure Land Lake Chivero * Dylan Kennious Ncube</h3>
+            <h3><a href="site-plan-rafting.html">Site Plan</a></h3>
+            <h3><a href="contactus.html">Contact Us</a></h3>
+            <div class="social">
+                <a href="https://facebook.com" target="blank">
+                    <img src="images/facebook.jpg" alt="fb icon" width="50" height="50">
+                </a>
+                <a href="https://twitter.com" target="blank">
+                    <img src="images/twitter.png" alt="twitter icon"width="50" height="50">
+                </a>
+                <a href="https://instagram.com" target="blank">
+                    <img src="images/instagram.jpg" alt="instagram icon"width="50" height="50">
+                </a>
+            </div>
+       
+        </footer>
+    </div>
+</body>
+
+<script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
+
+</html>
