@@ -14,15 +14,15 @@ body {
 }
 
 .google-map {
-    padding-bottom: 50;
+    padding-bottom: 50rem;
     position: relative;
 }
 
 .google-map iframe {
-    height: 70;
-    width: 70;
+    height: 70px;
+    width: 70px;
     left: 0;
-    right: 50;
+    right: 50px;
     top: 0;
     position: absolute;
 }
@@ -168,7 +168,7 @@ main section img {
 }
 
 .card-img {
-    width: 100;
+    width: 100px;
     border: 10px solid #134266;
     box-shadow: 5px 5px 10px #6f7364;
     transition: transform .5s;
